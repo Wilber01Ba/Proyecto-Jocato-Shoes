@@ -1,0 +1,131 @@
+<link rel="stylesheet" href="styles.css">
+<div class="principal-container">
+  
+  <!-- Carousel Section -->
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+      
+      <!-- Imágenes del carousel -->
+      <img 
+        src="assets/img/carousel1.jpg"
+        alt="Imagen 1"
+        class="carousel-image image-active fade-zoom"
+        loading="lazy"
+        aria-hidden="false">
+
+      <img 
+        src="assets/img/carousel2.jpg"
+        alt="Imagen 2"
+        class="carousel-image"
+        loading="lazy"
+        aria-hidden="true">
+
+      <img 
+        src="assets/img/carousel3.jpg"
+        alt="Imagen 3"
+        class="carousel-image"
+        loading="lazy"
+        aria-hidden="true">
+
+      <!-- Botones de navegación -->
+      <div class="buttons-container visible">
+        <button 
+          class="btn btn-prev" 
+          aria-label="Imagen anterior">
+          <span aria-hidden="true">&#8249;</span>
+        </button>
+        <button 
+          class="btn btn-next" 
+          aria-label="Siguiente imagen">
+          <span aria-hidden="true">&#8250;</span>
+        </button>
+      </div>
+
+      <!-- Indicadores del carousel -->
+      <div class="carousel-indicators">
+        <button class="active" aria-label="Ir a imagen 1" aria-pressed="true"></button>
+        <button aria-label="Ir a imagen 2" aria-pressed="false"></button>
+        <button aria-label="Ir a imagen 3" aria-pressed="false"></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Loading state -->
+  <div class="carousel-loading">
+    <div class="loading-placeholder">
+      <p>Cargando carousel...</p>
+    </div>
+  </div>
+
+  <!-- Tags Section -->
+  <div class="tags">
+    <div class="tag-card">
+      <div class="tag-header">
+        <h5>Título 1</h5>
+      </div>
+      <div class="imagen-container">
+        <img 
+          src="assets/img/tag1.jpg"
+          alt="Etiqueta 1"
+          loading="lazy">
+      </div>
+      <div class="tag-description">
+        <p>Descripción de la etiqueta 1.</p>
+      </div>
+      <div class="tag-action">
+        <button class="tag-button" aria-label="Acción para Título 1">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-header">
+        <h5>Título 2</h5>
+      </div>
+      <div class="imagen-container">
+        <img 
+          src="assets/img/tag2.jpg"
+          alt="Etiqueta 2"
+          loading="lazy">
+      </div>
+      <div class="tag-description">
+        <p>Descripción de la etiqueta 2.</p>
+      </div>
+      <div class="tag-action">
+        <button class="tag-button" aria-label="Acción para Título 2">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-header">
+        <h5>Título 3</h5>
+      </div>
+      <div class="imagen-container">
+        <img 
+          src="assets/img/tag3.jpg"
+          alt="Etiqueta 3"
+          loading="lazy">
+      </div>
+      <div class="tag-description">
+        <p>Descripción de la etiqueta 3.</p>
+      </div>
+      <div class="tag-action">
+        <button class="tag-button" aria-label="Acción para Título 3">
+          Ver más
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen info (solo para debugging) -->
+  <div class="screen-info">
+    <p>Tamaño actual: <strong>md</strong></p>
+    <p>Ancho: <strong>1280px</strong></p>
+    <p>Imágenes cargadas: <strong>3</strong></p>
+  </div>
+
+</div>

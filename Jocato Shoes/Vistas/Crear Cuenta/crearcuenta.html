@@ -1,0 +1,190 @@
+<link rel="stylesheet" href="styles.css">
+<div class="wrapper">
+  <div class="main-container">
+    <div class="imagen">
+      <img src="/logss.png" alt="Logo">
+    </div>
+    
+    <div class="login-container">
+      <h2>Crear Cuenta</h2>
+      
+      <form enctype="multipart/form-data" class="formulario">
+        
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="username">
+              <span class="required">*</span>Usuario
+            </label>
+            <input 
+              type="text" 
+              id="username" 
+              name="username" 
+              placeholder="pepito123Sa" 
+            />
+            <div class="error-message">
+              <div class="error">
+                Usuario requerido, debe ser mayor a 3 caracteres
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group half-width">
+            <label for="password">
+              <span class="required">*</span>Contraseña
+            </label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              placeholder="••••••••" 
+            />
+            <div class="error-message">
+              <div class="error">
+                Contraseña requerida
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="direccion">
+            <span class="required">*</span>Dirección
+          </label>
+          <input 
+            type="text" 
+            id="direccion" 
+            name="direccion" 
+            placeholder="Cra 5c #6N-78 Norte, Las Palmas" 
+          />
+          <div class="error-message">
+            <div class="error">
+              Dirección requerida
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="nombre">
+              <span class="required">*</span>Nombre
+            </label>
+            <input 
+              type="text" 
+              id="nombre" 
+              name="nombre" 
+              placeholder="Josué" 
+            />
+            <div class="error-message">
+              <div class="error">
+                Nombre requerido
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group half-width">
+            <label for="apellido">
+              <span class="required">*</span>Apellido
+            </label>
+            <input 
+              type="text" 
+              id="apellido" 
+              name="apellido" 
+              placeholder="Rangel" 
+            />
+            <div class="error-message">
+              <div class="error">
+                Apellido requerido
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="documento">
+              <span class="required">*</span>Documento
+            </label>
+            <input 
+              type="text" 
+              id="documento" 
+              name="documento" 
+              placeholder="CC 1127045112" 
+            />
+            <div class="error-message">
+              <div class="error">
+                Documento requerido
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group half-width">
+            <label for="email">
+              <span class="required">*</span>Correo Electrónico
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="alguien@gmail.com" 
+            />
+            <div class="error-message">
+              <div class="error">
+                Correo requerido
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="esAdmin">¿Es Admin?</label>
+          <select id="esAdmin" name="esAdmin">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="codigoAdmin">
+            <span class="required">*</span>Código de Administrador
+          </label>
+          <input 
+            type="text" 
+            id="codigoAdmin" 
+            name="codigoAdmin" 
+            placeholder="Ingrese su código admin" 
+          />
+          <div class="error-message">
+            <div class="error">
+              Código requerido
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="foto">
+            <span class="required">*</span>Foto de Perfil
+          </label>
+          <input 
+            type="file" 
+            id="foto" 
+            name="foto" 
+            accept="image/*" 
+          />
+          <div class="error-message">
+            <div class="error">
+              Imagen requerida
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="login-btn">
+          Crear Cuenta
+        </button>
+
+        <div class="extra-links">
+          <a href="/login">Iniciar Sesión</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,325 @@
+.wrapper {
+  width: 90%;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fade ease 1s forwards;
+  padding: 20px;
+}
+
+.main-container {
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-height: 600px;
+}
+
+/* === SECCIÓN DE IMAGEN === */
+.imagen {
+  flex: 1;
+  background: linear-gradient(135deg, #80279f 0%, #a855f7 50%, #c084fc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 600px;
+}
+
+.imagen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.imagen img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+  position: relative;
+}
+
+/* === CONTENEDOR DEL FORMULARIO === */
+.login-container {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  flex: 1.2;
+  overflow-y: auto;
+}
+
+.login-container h2 {
+  color: #1A365D;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.form-group.half-width {
+  flex: 1;
+  min-width: 0;
+}
+
+label {
+  color: #374151;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.required {
+  color: #dc2626;
+  margin-right: 0.25rem;
+}
+
+/* === INPUTS Y SELECTS === */
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  outline: none;
+  background-color: #f9fafb;
+  color: #374151;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: #3182ce;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+input.input-error {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+input::placeholder {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+/* === INPUT FILE === */
+input[type="file"] {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* === BOTÓN === */
+.login-btn {
+  background-color: #3182ce;
+  color: white;
+  padding: 0.875rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.login-btn:hover:not(:disabled) {
+  background-color: #2c5aa0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+.login-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* === LINKS Y ERRORES === */
+.extra-links {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.extra-links a {
+  color: #3182ce;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.extra-links a:hover {
+  color: #2c5aa0;
+  text-decoration: underline;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.error-message {
+  min-height: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* === ANIMACIÓN === */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE === */
+@media screen and (min-width: 1200px) {
+  .login-container { padding: 3rem; }
+  .form-row { gap: 1.5rem; }
+}
+
+@media screen and (max-width: 1199px) {
+  .wrapper { width: 95%; }
+  .imagen img { max-width: 350px; }
+  .login-container { padding: 2rem; }
+}
+
+@media screen and (max-width: 1023px) {
+  .main-container {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .imagen { min-height: 250px; border-radius: 15px 15px 0 0; }
+  .imagen img { max-width: 280px; }
+  .login-container { border-radius: 0 0 15px 15px; padding: 2rem; }
+  .login-container h2 { font-size: 1.6rem; }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper { padding: 15px; }
+  .form-row { flex-direction: column; gap: 0.5rem; }
+  .form-group.half-width { width: 100%; }
+  .imagen { min-height: 200px; }
+  .imagen img { max-width: 250px; }
+  .login-container { padding: 1.5rem; }
+  input, select { padding: 0.7rem; }
+  .login-btn { padding: 0.8rem; }
+}
+
+@media screen and (max-width: 588px) {
+  .wrapper { padding: 10px; }
+  .imagen { min-height: 180px; }
+  .imagen img { max-width: 200px; }
+  .login-container { padding: 1.25rem; }
+  .login-container h2 { font-size: 1.4rem; margin-bottom: 1.5rem; }
+  label { font-size: 0.85rem; }
+  input, select { padding: 0.65rem; font-size: 0.9rem; }
+  input::placeholder { font-size: 0.85rem; }
+  .error { font-size: 0.75rem; }
+}
+
+@media screen and (max-width: 479px) {
+  .wrapper { padding: 8px; }
+  .imagen { min-height: 160px; }
+  .imagen img { max-width: 180px; }
+  .login-container { padding: 1rem; }
+  .login-container h2 { font-size: 1.3rem; }
+  input, select { padding: 0.6rem; font-size: 0.9rem; }
+  .login-btn { padding: 0.75rem; font-size: 0.95rem; }
+  input[type="file"]::file-selector-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .wrapper { padding: 5px; }
+  .imagen img { max-width: 150px; }
+  .login-container { padding: 0.875rem; }
+  .login-container h2 { font-size: 1.2rem; }
+  label { font-size: 0.8rem; margin-bottom: 0.4rem; }
+  input, select { padding: 0.55rem; font-size: 0.85rem; }
+  .login-btn { padding: 0.7rem; font-size: 0.9rem; }
+}
+
+@media screen and (max-height: 700px) and (min-width: 768px) {
+  .login-container {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+/* Scrollbar */
+.login-container::-webkit-scrollbar { width: 6px; }
+.login-container::-webkit-scrollbar-track {
+  background: #f1f1f1; border-radius: 3px;
+}
+.login-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1; border-radius: 3px;
+}
+.login-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

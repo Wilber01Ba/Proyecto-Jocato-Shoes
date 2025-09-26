@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="styles.css">
+<div class="wrapper">
+  <div class="main-container">
+    <div class="logo-container">
+      <img src="/logE.png" alt="Logo">
+    </div>
+    
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      
+      <form>
+        <div class="form-group">
+          <label for="username">
+            <span class="required">*</span>Username
+          </label>
+          <input 
+            type="text" 
+            id="username" 
+            placeholder="pepito23" 
+            name="username"
+          />
+          <div class="error-message">
+            <div class="error">
+              Nombre Requerido
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">
+            <span class="required">*</span>Contraseña
+          </label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            placeholder="••••••••"
+          />
+          <div class="error-message">
+            <div class="error">
+              Contraseña Requerida
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="login-btn">
+          Entrar
+        </button>
+        
+        <div class="extra-links">
+          <a href="/crear">Crear Cuenta</a>
+        </div>
+
+        <div class="error-login">
+          <p>Error al Iniciar Sesión, valide sus datos</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
